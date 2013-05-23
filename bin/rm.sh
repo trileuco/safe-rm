@@ -76,6 +76,12 @@ do
         OPT_RECURSIVE=1; debug "recursive"
         shift
         ;;
+		
+        -rf|-fr)
+        OPT_RECURSIVE=1; debug "recursive"		
+        OPT_FORCE=1; debug "force"
+		shift
+		;;		
 
         -[a-zA-Z0-9]*)
         invalid_option $1
